@@ -24,10 +24,10 @@ app.get("*", function (req, res) {
 })
 const port = process.env.PORT || 8000
 
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect(process.env.MONGO_URL || "mongodb://humansteriodspharma:abc7777578@ac-olmdg0d-shard-00-00.hgrkylq.mongodb.net:27017,ac-olmdg0d-shard-00-01.hgrkylq.mongodb.net:27017,ac-olmdg0d-shard-00-02.hgrkylq.mongodb.net:27017/humansteroid?replicaSet=atlas-12oyil-shard-0&ssl=true&authSource=admin", {
     useUnifiedTopology: true
 }).then(() => {
-    alert('Welcome to Human Pharma Steriods');
+    console.log('Welcome to Human Pharma Steriods');
     app.listen(port, () => {
         console.log('server start');
     })

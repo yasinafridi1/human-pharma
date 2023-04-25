@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
-const access_secret = process.env.ACCESS_TOKEN_SECRET;
-const refresh_secret = process.env.REFRESH_TOKEN_SECRET;
+const access_secret = process.env.ACCESS_TOKEN_SECRET || "mytokenkeyforaccesstokendeprecationWarninghelloworldWedbook";
+const refresh_secret = process.env.REFRESH_TOKEN_SECRET || "mytokenkeyforaccesstokendeprecationWarninghelloworldWedbook";
 const RefreshModel = require('../app/models/RefreshModel');
 
 
