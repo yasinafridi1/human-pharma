@@ -22,19 +22,19 @@ app.get("*", function (req, res) {
         }
     )
 })
-
+const port = process.env.PORT || 8000
 
 mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true
 }).then(() => {
     console.log("database connected");
+    app.listen(port, () => {
+        console.log('server start');
+    })
+
 }).catch((err) => {
     console.log(err);
 })
 
 
 
-const port = process.env.PORT || 8000
-app.listen(port, () => {
-    console.log('server start');
-})
