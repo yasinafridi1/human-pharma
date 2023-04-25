@@ -27,7 +27,7 @@ const port = process.env.PORT || 8000
 mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true
 }).then(() => {
-    console.log("database connected");
+    alert('Welcome to Human Pharma Steriods');
     app.listen(port, () => {
         console.log('server start');
     })
